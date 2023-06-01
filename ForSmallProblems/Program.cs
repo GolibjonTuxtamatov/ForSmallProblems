@@ -50,59 +50,42 @@ namespace ForSmallProblems
             //}
 
             //========================================
+            // this solve shows pair three numbers in between two number
 
-            Console.WriteLine("Enter the two number and first number is smaller than second number!");
-            Console.Write("Enter the first number:");
-            int firstNumber = int.Parse(Console.ReadLine());
-            Console.Write("Enter the second number:");
-            int secondNumber = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the two number and first number is smaller than second number!");
+            //Console.Write("Enter the first number:");
+            //int firstNumber = int.Parse(Console.ReadLine());
+            //Console.Write("Enter the second number:");
+            //int secondNumber = int.Parse(Console.ReadLine());
 
 
-            int count = secondNumber%2 == 0 ? 4 : 5;
+            //int count = secondNumber%2 == 0 ? 4 : 5;
             
-            do
-            {
-                if (secondNumber - count >= firstNumber)
-                {
-                    int step = 3;
-                    while (step > 0)
-                    {
-                        int num = secondNumber - count;
-                        Console.WriteLine(num);
-                        if (count < secondNumber && count-2 >= 0)
-                        {
-                            count -= 2;
-                        }
-                        step--;
-                        if (step == 0)
-                        {
-                            break;
-                        }
-                    }
-                }
-                count -= 2;
-            } while (count >= 0);
-
-
-
-            //if (secondNumber % 2 == 0 && secondNumber-4>firstNumber)
+            //do
             //{
-            //    int count = 4;
-            //    while(count >=0)
+            //    if (secondNumber - count >= firstNumber)
             //    {
-            //        Console.WriteLine(secondNumber-count);
-            //        count-=2;
+            //        int step = 3;
+            //        while (step > 0)
+            //        {
+            //            int num = secondNumber - count;
+            //            Console.WriteLine(num);
+            //            if (count < secondNumber && count-2 >= 0)
+            //            {
+            //                count -= 2;
+            //            }
+            //            step--;
+            //            if (step == 0)
+            //            {
+            //                break;
+            //            }
+            //        }
             //    }
-            //}
-            //else if (secondNumber % 2 == 1 && (secondNumber-5>firstNumber))
-            //{
-            //    int count = 5;
-            //    while (count >= 0)
-            //    {
-            //        Console.WriteLine(secondNumber - count);
-            //        count -= 2;
-            //    }
-            //}
+            //    count -= 2;
+            //} while (count >= 0);
+
+
+
 
         }
     }
