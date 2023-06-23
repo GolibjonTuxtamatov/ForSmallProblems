@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Buffers;
-using System.Diagnostics;
-using System.Linq.Expressions;
-using System.Reflection.Metadata;
-using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace ForSmallProblems
@@ -12,207 +10,240 @@ namespace ForSmallProblems
     {
         static void Main(string[] args)
         {
+            // finding the shortest word in string word
 
+            //string word = "Salom men Toxamatov ne Golibjon";
+            //string[] words = word.Split(' ');
+            //string word2 = words[0];
 
-
-
-            //int sum = 0;
-            //string[] arr = Console.ReadLine().Split();
-            //Console.WriteLine(arr[1] + " " + arr[0]);
-            //foreach (string s in arr)
+            //for (int i = 0; i <= words.Length - 2; i++)
             //{
-            //    sum += Convert.ToInt32(s);
+            //    if (word2.Length > words[i].ToString().Length)
+            //    {
+            //        word2 = words[i];
+            //    }
+
             //}
-            //Console.WriteLine(sum);
+            //Console.WriteLine(word2);
 
-            //======================================
+            // month name
+            //int num = 1;
+            //switch (num)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Yanvar");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Fevral");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("Mart");
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("Aprel");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("May");
+            //        break;
+            //    default:
+            //        Console.WriteLine("bunday raqamada oy yoq tushundingmi");
+            //        break;
 
-            // Tub son
+            // find normal number between three numbers
 
-            //for(int i = 2; i < 100; i++)
+            //try
+            //{
+            //    while (true)
+            //    {
+            //        Console.Write("Enter the three number: ");
+            //        int a = int.Parse(Console.ReadLine());
+            //        int b = int.Parse(Console.ReadLine());
+            //        int c = int.Parse(Console.ReadLine());
+            //        if (a < b && a > c || a > b && a < c)
+            //        {
+            //            Console.WriteLine(a);
+            //        }
+            //        else if (b > a && b < c || b < a && b > c)
+            //        {
+            //            Console.WriteLine(b);
+            //        }
+            //        else if (c > a && c < b || c < a && c > b)
+            //        {
+            //            Console.WriteLine(c);
+            //        }
+
+            //    }
+            //}
+            //catch 
+            //{
+            //    Console.WriteLine();
+            //}
+
+
+            // to show stars
+
+            // int num =5;
+            //for(int i  = 0; i < num; i++)
+            // {
+            //     for(int k =5-i; k > 0; k--)
+            //     {
+            //         Console.Write(" ");
+            //     }
+            //     for(int j = 0; j < num; j++)
+            //     {
+            //         if(i == j || i > j)
+            //         {
+            //             Console.Write("* ");
+            //         }
+            //         else
+            //         {
+            //             Console.Write("  ");
+            //         }
+            //     }
+            //     Console.WriteLine();
+
+
+            //List<int> list = new List<int>();
+            //int number  = int.Parse(Console.ReadLine());
+            //int count = 0;
+            //for (int i = 1; i < number; i++)
+            //{
+            //    if (number %i==0)
+            //    {
+            //        list.Add(i);
+            //        count++;
+            //    }
+            //}
+            //list.Add(number);
+
+            //string result = count == 1 ? "Tub" : "Tub emas";
+            //list.ForEach(Console.WriteLine);
+            //Console.WriteLine(result);
+
+            // Ekub
+
+            //Console.WriteLine("Enter two number!!!");
+            //int number1 = int.Parse(Console.ReadLine());
+            //int number2 = int.Parse(Console.ReadLine());
+            //int Ekub = 0;
+            //for(int i = 1; i <= number1; i++)
+            //{
+            //    if(number1 % i == 0 && number2 % i == 0)
+            //    {
+            //        Ekub = i;
+            //
+            //}
+            //Console.WriteLine(Ekub);
+
+
+            //====================================
+
+            //int number = int.Parse(Console.ReadLine());
+            //int factorial = 1;
+
+            //for(int i = 2; i<= number; i++)
             //{
             //    int count = 0;
-            //    for (int j = 1; j < i; j++)
+
+            //    for (int j = 1; j< i; j++)
             //    {
             //        if (i % j == 0)
             //        {
             //            count++;
             //        }
             //    }
-            //    if (count == 1)
+            //    if(count == 1)
             //    {
-            //        Console.Write(i+" ");
+            //        factorial *= i;
+            //        Console.Write(factorial+" ");
             //    }
             //}
 
-            //======================
-
-            //for(int i = 100; i < 1000; i++)
+            //int numberZero = 0;
+            //while (factorial % 10 == 0)
             //{
-            //    string j = i.ToString();
-            //    if (j[0] == j[1] && j[0] != j[2]|| j[0] == j[2] && j[0] != j[1] || j[1] == j[2] && j[0] != j[1])
-            //    {
-            //        Console.WriteLine(j);
-            //    }
+            //    factorial /= 10;
+            //    numberZero++;
             //}
-
-            //========================================
-            // this solve shows pair three numbers in between two number
-
-            //Console.WriteLine("Enter the two number and first number is smaller than second number!");
-            //Console.Write("Enter the first number:");
-            //int firstNumber = int.Parse(Console.ReadLine());
-            //Console.Write("Enter the second number:");
-            //int secondNumber = int.Parse(Console.ReadLine());
+            //Console.WriteLine(numberZero);
 
 
-            //int count = secondNumber%2 == 0 ? 4 : 5;
 
-            //do
-            //{
-            //    if (secondNumber - count >= firstNumber)
-            //    {
-            //        int step = 3;
-            //        while (step > 0)
-            //        {
-            //            int num = secondNumber - count;
-            //            Console.WriteLine(num);
-            //            if (count < secondNumber && count-2 >= 0)
-            //            {
-            //                count -= 2;
-            //            }
-            //            step--;
-            //            if (step == 0)
-            //            {
-            //                break;
-            //            }
-            //        }
-            //    }
-            //    count -= 2;
-            //} while (count >= 0);
-
-
-            //=========================
-
-            //int[] number = { 1, 2, 3 };
-            //int[] number2 = { 1, 2, 3 };
-            //int[] number3 = new int[3];
-            //for(int i = 0; i < 3; i++)
-            //{
-            //    number3[i] = number[i] + number2[i];
-            //}
-            //Array.ForEach(number3, Console.WriteLine);
-
-            //int reverseNumber = int.Parse(Console.ReadLine());
-            //Console.WriteLine();
-
-            //======================================
-
-            //string num = Console.ReadLine();
-            //char[] reverseNum = new char[num.Length];
-
-            //for(int i = 0; i< num.Length; i++)
-            //{
-            //    reverseNum[i] = num[i];
-            //}
-            //Array.Reverse(reverseNum);
-            //int gum = int.Parse(new string(reverseNum));
-            //Console.WriteLine(gum);
-
-            //==============================================
-
-            //int[] ar = { 1, 2, 3, 5, 5 };
-            //int[] num = TwoSum(ar, 5);
-            //Array.ForEach(num,Console.WriteLine);
-
-            //=============================
-            // palindrome number
+            // Perfect Number 
 
             //int number = int.Parse(Console.ReadLine());
-            //int rem = 0;
-            //int number2 = number;
-
-            //while (number != 0)
+            //int sum = 0;
+            //for (int i = 1; i < number; i++)
             //{
-            //    int num = number % 10;
-            //    rem = rem * 10 + num;
-            //    number = number / 10;
-            //}
-
-            //if(number2 == rem)
-            //    Console.WriteLine(true);
-            //else
-            //    Console.WriteLine(false);
-            //====
-            //string str = Console.ReadLine();
-
-            //char[] strArr = new char[str.Length];
-
-            //for (int i = 0; i < strArr.Length; i++)
-            //{
-            //    strArr[i] = str[i];
-            //}
-            //Array.Reverse(strArr);
-            //string str2 = new string(strArr);
-            //if (str ==  str2)
-            //    Console.WriteLine(true);
-            //else
-            //    Console.WriteLine(false);
-
-            //I             1
-            //V             5
-            //X             10
-            //L             50
-            //C             100
-            //D             500
-            //M             1000
-            // IV = 4 IX = 9 XL = 40 XC = 90 CD = 400 CM = 900 
-            //string strnum = Console.ReadLine();
-
-            //char[] str = new char[] { };
-            //for(int i = 0; i < strnum.Length; i++)
-            //{
-            //    str[i] = strnum[i];
-            //}
-
-            //int i = 0;
-            //StringBuilder justString = new StringBuilder();
-            //int number=0;
-            //while (i!=strnum.Length)
-            //{
-
-            //    switch (i)
+            //    if(number % i == 0)
             //    {
-            //        case 'M':
-            //            break;
+            //        sum += i;
             //    }
             //}
+            //string m = number == sum ?"Perfect" : "Not Perfect";
+            //Console.WriteLine(m);
 
+            // Armstrong
+            //int num = int.Parse(Console.ReadLine());
 
+            //for(int i = 0; i < num; i++)
+            //{
+            //    checkArmstrong(i);
 
-
-            Console.WriteLine("Hello World!");
-
+            //}
+            checkZeroOne("11111");
 
         }
-        //public static int[] TwoSum(int[] nums, int target)
-        //{
+        
+        static void checkZeroOne(string num)
+        {
+           
+            bool check =  true;
+            for(int i = 0;i < num.Length; i++)
+            {
+                if(num[i]=='1')
+                {   
+                    if(check == false)
+                    {
+                        check = true; break;
+                    }
+                    check = true;
+                }
+                else if (num[i]=='0')
+                {
+                    
+                    check = false;
+                }
 
-        //    int[] output = new int[2];
-        //    for (int i = 0; i < nums.Length; i++)
-        //    {
-        //        for (int j = 0; j < nums.Length; j++)
-        //        {
-        //            if (nums[i] + nums[j] == target)
-        //            {
-        //                output[0] = i;
-        //                output[1] = j;
-        //            }
+            }
+            string result = check ? "NO" : "YES";
+            Console.WriteLine(result);
+        }
+        static void checkArmstrong(int number)
+        {
+            int n = number;
+            int lengthNum = number.ToString().Length;
+            int num1 = 0;
+            while (number != 0)
+            {
+                int num2 = 1;
+                int num3 = number % 10;
+                for(int i = 0; i < lengthNum; i++)
+                {
+                    num2 *= num3;
+                }
+                num1 += num2;
+                number /= 10;
 
-        //        }
-        //    }
-        //    return output;
+            }
 
-        //}
+            if (n == num1)
+            {
+                Console.WriteLine(n);
+            }
+        }
+
     }
+
+    
 }
